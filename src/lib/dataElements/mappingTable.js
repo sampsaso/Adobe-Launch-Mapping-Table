@@ -9,10 +9,8 @@
  * @returns {*}
  */
 module.exports = function (settings) {
-    if (typeof settings !== 'undefined' && settings !== null) {
-        var dataElemValue = settings.dataElement;
-        addStartsWithToIE();
 
+    function checkValue(dataElemValue) {
         try {
             for (var i = 0; i < settings.size; i++) {
                 var method = settings[i].method;
@@ -83,6 +81,15 @@ module.exports = function (settings) {
             return undefined;
         }
         return dataElemValue;
+    }
+
+    if (typeof settings !== 'undefined' && settings !== null) {
+        var dataElemValue = settings.dataElement;
+        addStartsWithToIE();
+        if (typeof dataElemValue !== 'undefined' && dataElemValue !== null && Array.isArray(dataElemValue)) {
+            return dataElemValue.map(checkValue);
+        }
+        return checkValue(dataElemValue);
     }
 };
 
