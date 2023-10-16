@@ -11,7 +11,6 @@
 module.exports = function (settings) {
 
     function checkValue(dataElemValue) {
-        console.log('mappingTable--checkValue got dataElemValue', dataElemValue); // TIDY
         try {
             for (var i = 0; i < settings.size; i++) {
                 var method = settings[i].method;
@@ -66,12 +65,10 @@ module.exports = function (settings) {
                     }
                 } else if (method === 'is true') {
                     if (dataElemValue === true) {
-                        console.log('dataElements--checkValue found was a boolean true, so will return out value', out); // TIDY
                         return out;
                     }
                 } else if (method === 'is false') {
                     if (dataElemValue === false) {
-                        console.log('dataElements--checkValue found was a boolean true, so will return out value', out); // TIDY
                         return out;
                     }
                 }
