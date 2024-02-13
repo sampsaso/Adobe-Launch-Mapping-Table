@@ -1,13 +1,13 @@
 {
-  "displayName": "Mapping Table",
-  "name": "mapping-table",
+  "displayName": "Mapping Table Remix",
+  "name": "mapping-table-remix",
   "platform": "web",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "exchangeUrl": "https://www.adobeexchange.com/experiencecloud.details.103136.html",
-  "description": "Provides a rich and versatile mapping table data element. Supports regex, exact and case insensitive matches, starts with, contains and boolean matching. Further the output can be static or another data element to offer even more flexibility. E.g. ideal for implementing multiple marketing pixels.",
+  "description": "Provides a rich and versatile mapping table data element. Supports regex, exact and case insensitive matches, starts with, contains and boolean matching. Further the output can be static or another data element to offer even more flexibility. E.g. ideal for implementing multiple marketing pixels. Based on Benedikt Wedenik's extension and it's table supporting version by Simon Amarasingham.",
   "author": {
-    "name": "Adobe Consulting - Benedikt Wedenik, MSc",
-    "email": "wedenik@adobe.com"
+    "name": "Sampsa Suoninen",
+    "email": "sampsa@accrease.com"
   },
   "viewBasePath": "src/view/",
   "iconPath": "resources/icons/icon.svg",
@@ -21,8 +21,8 @@
   },
   "dataElements": [
     {
-      "displayName": "Mapping Table",
-      "name": "mapping-table",
+      "displayName": "Mapping Table Remixed",
+      "name": "mapping-table-remix",
       "schema": {
         "$schema": "http://json-schema.org/draft-04/schema#",
         "type": "object",
